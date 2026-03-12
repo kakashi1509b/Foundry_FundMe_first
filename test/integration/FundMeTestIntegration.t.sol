@@ -27,7 +27,6 @@ contract InteractionsTest is Test {
         uint256 preUserBalance = address(alice).balance;
         uint256 preOwnerBalance = address(fundMe.getOwner()).balance;
 
-        // Using vm.prank to simulate funding from the USER address
         vm.prank(alice);
         fundMe.fund{value: SEND_VALUE}();
 
